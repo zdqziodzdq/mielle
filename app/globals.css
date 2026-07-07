@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Jost:wght@400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    @apply bg-cream text-cocoa antialiased;
+    line-height: 1.6;
+  }
+
+  img,
+  video {
+    @apply max-w-full block;
+  }
+
+  a {
+    @apply text-inherit;
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply font-display text-3xl md:text-4xl font-bold text-center mb-6 leading-tight;
+  }
+
+  .section-subtitle {
+    @apply text-center text-cocoa-soft mb-8;
+  }
+
+  .btn {
+    @apply inline-block font-body font-bold text-base tracking-wide text-center no-underline border-none rounded-full px-8 py-4 cursor-pointer transition-all duration-150;
+  }
+
+  .btn:hover {
+    @apply -translate-y-0.5;
+  }
+
+  .btn:focus-visible {
+    @apply outline-4 outline-honey-dark outline-offset-1;
+  }
+
+  .btn--primary {
+    @apply bg-honey text-cocoa;
+    box-shadow: 0 6px 18px rgba(242, 169, 59, 0.45);
+  }
+
+  .btn--primary:hover {
+    @apply bg-honey-dark text-white;
+  }
+
+  .btn--cta {
+    @apply bg-rose text-white w-full text-lg px-4 py-4;
+    box-shadow: 0 8px 22px rgba(240, 98, 146, 0.45);
+    animation: pulse 2.2s infinite;
+  }
+
+  .btn--cta:hover {
+    @apply bg-rose-dark;
+  }
+
+  @keyframes pulse {
+    0%,
+    100% {
+      box-shadow: 0 8px 22px rgba(240, 98, 146, 0.45);
+    }
+    50% {
+      box-shadow: 0 8px 30px rgba(240, 98, 146, 0.75);
+    }
+  }
+}
+
+/* Announce bar */
+.announce {
+  @apply bg-honey text-cocoa text-center px-4 py-2.5 text-sm flex gap-2 items-center justify-center;
+}
+
+.announce__badge {
+  @apply bg-cocoa text-honey rounded-full w-5 h-5 inline-flex items-center justify-center text-xs font-bold;
+}
+
+/* Marquee */
+.marquee {
+  @apply overflow-hidden bg-cocoa text-cream py-2;
+}
+
+.marquee--logos {
+  @apply bg-white py-3.5 border-b border-cream-2;
+}
+
+.marquee__track {
+  @apply flex gap-12 whitespace-nowrap w-max text-sm font-medium tracking-wider;
+  animation: scroll 28s linear infinite;
+}
+
+.marquee__track--logos {
+  @apply items-center gap-16;
+  animation: scroll 34s linear infinite;
+}
+
+.marquee__track--logos img {
+  @apply h-[42px] w-auto;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Grid utilities */
+.grid-3 {
+  @apply grid grid-cols-3 gap-6;
+}
+
+.grid-2 {
+  @apply grid grid-cols-2 gap-6;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .grid-3 {
+    @apply grid-cols-1;
+  }
+
+  .grid-2 {
+    @apply grid-cols-1;
+  }
+}
