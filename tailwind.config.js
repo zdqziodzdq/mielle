@@ -7,16 +7,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        honey: "#F2A93B",
-        "honey-dark": "#D98A15",
-        rose: "#F06292",
+        honey: "#F06292",
+        "honey-dark": "#E84C82",
+        rose: "#F0A3C4",
         "rose-dark": "#D94A7B",
-        cream: "#FFF9F1",
-        "cream-2": "#FDF1E0",
-        cocoa: "#3B2A1A",
-        "cocoa-soft": "#6B5540",
-        green: "#2E9E5B",
-        red: "#D64545",
+        cream: "#FFF5F9",
+        "cream-2": "#FFF0F6",
+        cocoa: "#5A2F47",
+        "cocoa-soft": "#8B5A75",
+        green: "#D491A8",
+        red: "#E84C82",
       },
       fontFamily: {
         display: ["Fraunces", "serif"],
@@ -26,7 +26,7 @@ module.exports = {
         DEFAULT: "18px",
       },
       boxShadow: {
-        DEFAULT: "0 8px 30px rgba(59, 42, 26, 0.08)",
+        DEFAULT: "0 8px 30px rgba(240, 98, 146, 0.12)",
       },
     },
   },

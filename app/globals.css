@@ -57,17 +57,17 @@
   }
 
   .btn--primary {
-    @apply bg-honey text-cocoa;
-    box-shadow: 0 6px 18px rgba(242, 169, 59, 0.45);
+    @apply bg-honey text-white;
+    box-shadow: 0 6px 18px rgba(240, 98, 146, 0.35);
   }
 
   .btn--primary:hover {
-    @apply bg-honey-dark text-white;
+    @apply bg-honey-dark;
   }
 
   .btn--cta {
     @apply bg-rose text-white w-full text-lg px-4 py-4;
-    box-shadow: 0 8px 22px rgba(240, 98, 146, 0.45);
+    box-shadow: 0 8px 22px rgba(240, 163, 196, 0.45);
     animation: pulse 2.2s infinite;
   }
 
@@ -78,10 +78,10 @@
   @keyframes pulse {
     0%,
     100% {
-      box-shadow: 0 8px 22px rgba(240, 98, 146, 0.45);
+      box-shadow: 0 8px 22px rgba(240, 163, 196, 0.45);
     }
     50% {
-      box-shadow: 0 8px 30px rgba(240, 98, 146, 0.75);
+      box-shadow: 0 8px 30px rgba(240, 163, 196, 0.75);
     }
   }
 }
